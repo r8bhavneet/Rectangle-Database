@@ -1,0 +1,44 @@
+.table2{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 2px solid gray;
+}
+td,th {
+    border: 2px solid gray;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  .container{
+    
+    text-align:center;
+  }
+  #data input{
+    padding:24px;
+  }
+  .update_button{
+    margin-top:24px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    margin-top: 18px;
+    font-weight: bold;
+    background-color: gray;
+    align-items: center;
+  }
+  h2{
+      text-align: center;
+  }
+  .update_button{
+    margin:8px;
+  }
+  
+  .inputs{
+    margin:8px;
+    padding:8px;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/data.css" />
+    <title>Rectangle Data</title>
+</head>
+<body>
+    <% rows.forEach(function(r) { %>
+    <table class="table2">
+        
+          <tr>
+              <th>Name</th>
+              <td><%=r.name %></td>
+          </tr>
+          <tr>
+              <th>Color</th>
+              <td><%=r.color %></td>
+          </tr>
+          <tr>
+              <th>Width</th>
+              <td><%=r.width %></td>
+          </tr>
+          <tr>
+              <th>Height</th>
+              <td><%=r.height %></td>
+          </tr>
+          <tr>
+              <th>UniqueID</th>
+              <td><%=r.uniqueid %></td>
+          </tr>
+      </table>
+        <h2>Update Information for the Rectangle by any Attribute</h2>
+        <form class ="container" action="/<%=r.uniqueid %>" method="post">
+        <input class="inputs" type="text"  name ="Update_name" placeholder="Rectangle Name">
+        <input class="inputs" type="number" name="Update_width" placeholder="Width">
+        <input class="inputs" type="number" name="Update_height" placeholder="Height">
+        <input class="inputs" type="text" name="Update_color" placeholder="Color">
+        <input class="inputs" type="submit" class="update_button" name="submit_b" value="Update Info">
+        <h3> Reload The Page.</h3>
+      </form>
+      
+      <% }); %>
+</body>
+</html>

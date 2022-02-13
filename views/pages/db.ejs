@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%- include ("../partials/header.ejs") %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+   <title>Rectangle Database</title>
+   <link rel="stylesheet" type="text/css" href="/stylesheets/datastyle.css" />
 </head>
 
 <body>
 
-<%- include ("../partials/nav.ejs") %>
+  <body>
 
-<div class="container">
-<h2>Database Results</h2>
-
-<ul>
-    <% results.forEach(function(r) { %>
-        <li><%= r.id %> - <%= r.name %></li>
-    <% }); %>
-</ul>
-
-</div>
+    <form class ="container" action="/add" method="post">
+      <div id ="data">
+        <input type="text"  name ="name" placeholder="Rectangle Name">
+        <input type="number" name="width" placeholder="Width">
+        <input type="number" name="height" placeholder="Height">
+        <input type="text" name="color" placeholder="Color">
+      </div>
+      <input type="submit" class="submit button" name="submit_b" value="Add Rectangle">
+    </form>
+    
+    <div class="container">
+    <h2>Rectangle</h2>
+    </div>
+    <table class="table">
+          <thead>
+            <tr class="heading">
+                <th>Name</th>
+                <th>Unique ID</th>
+            </tr>
+          </thead>
+        <% rows.forEach(function(r) { %>
+            <tbody class="table-body">
+                <tr class="activity">
+                    <td><a href='/views/pages/data/<%= r.uniqueid %>'><%= r.name %></a></td>
+                    <td><%= r.uniqueid %></td>
+                </tr>
+            </tbody>
+        <% }); %>
+        </table>
+    
+     
+        <form class="container delete_rectangle" action="/delete" method="post">
+          <input type="text" name="delete_id" class="del_b" placeholder="Delete by Id">
+          <input type="submit" class="delete button" name="remove" value="Delete Rectangle">
+        </form>
 
 </body>
 </html>
