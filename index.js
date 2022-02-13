@@ -40,8 +40,8 @@ app.post('/add',(req,res)=>{
         let rectangle_width = req.body.width;
         let rectangle_color = req.body.color; 
         let id = generateUniqueId({
-            includeSymbols: ['@','|'],
-            excludeSymbols: ['0','#'],
+            includeSymbols: ['|'],
+            excludeSymbols: ['0','#','@'],
             length: 10
           });
           console.log(id);
