@@ -128,7 +128,7 @@ app.post('/:id',(req,res)=>{
                 res.send(error);
         })      
     }
-    if(new_width != "" || new_width !=0)
+    if(new_width != "" || new_width <0)
     {
         let sql =`Update rectangle set width=${new_width} where uniqueid='${id}'`;
         pool.query(sql,(error,result)=>{
@@ -136,7 +136,7 @@ app.post('/:id',(req,res)=>{
                 res.send(error);
         })      
     }
-    if(new_height != "" || new_height !=0)
+    if(new_height != "" || new_height <0)
     {
         let sql =`Update rectangle set height=${new_height} where uniqueid='${id}'`;
         pool.query(sql,(error,result)=>{
