@@ -7,9 +7,11 @@ const{ Pool}= require('pg');
 var pool;
 pool= new Pool({
     connectionString: process.env.DATABASE_URL || 'postgres://postgres:Reset123@localhost/rectangles',
+   
     ssl: {
         rejectUnauthorized: false
       }
+      
 })
 
 var app = express();
@@ -45,7 +47,7 @@ app.post('/add',(req,res)=>{
             length: 10
           });
           console.log(id);
-        if(rectangle_name=="" || rectangle_color=="" ||rectangle_height=="" || rectangle_width=="" || rectangle_height==0 || rectangle_width==0){
+        if(rectangle_name=="" || rectangle_color=="" ||rectangle_height==""  || rectangle_width=="" || rectangle_height<0 || rectangle_width<0){
                 var getRecQuery = `SELECT * FROM rectangle`
                 pool.query(getRecQuery,(error,result)=>{
                 if(error)
@@ -128,7 +130,7 @@ app.post('/:id',(req,res)=>{
                 res.send(error);
         })      
     }
-    if(new_width != "" || new_width <0)
+    if(new_width != "" || new_width >0)
     {
         let sql =`Update rectangle set width=${new_width} where uniqueid='${id}'`;
         pool.query(sql,(error,result)=>{
@@ -136,7 +138,7 @@ app.post('/:id',(req,res)=>{
                 res.send(error);
         })      
     }
-    if(new_height != "" || new_height <0)
+    if(new_height != "" || new_height >0)
     {
         let sql =`Update rectangle set height=${new_height} where uniqueid='${id}'`;
         pool.query(sql,(error,result)=>{
