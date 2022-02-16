@@ -151,7 +151,7 @@ app.post('/:id',(req,res)=>{
             if(error)
                 res.send(error);
         var results = {'rows':result.rows}
-        res.redirect("pages/db");
+        res.redirect("/database");
     })
 })
 
