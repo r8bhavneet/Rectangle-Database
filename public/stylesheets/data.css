@@ -31,7 +31,7 @@ td,th {
     background-color: gray;
     align-items: center;
   }
-  h2{
+  h1,h2{
       text-align: center;
   }
   .update_button{
