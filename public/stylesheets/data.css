@@ -42,3 +42,7 @@ td,th {
     margin:8px;
     padding:8px;
   }
+
+  svg{
+    align-items: center;
+  }

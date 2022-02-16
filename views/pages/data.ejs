@@ -40,8 +40,11 @@
         <input class="inputs" type="number" name="Update_height" placeholder="Height">
         <input class="inputs" type="text" name="Update_color" placeholder="Color">
         <input class="inputs" type="submit" class="update_button" name="submit_b" value="Update Info">
-        <h3> Reload The Page.</h3>
       </form>
+
+      <svg width="<%=r.width %>" height="<%=r.height %>">
+        <rect width="<%=r.width %>" height="<%=r.height %>" style="fill:'<%=r.color %>';stroke:rgb(0,0,0)" />
+      </svg>
       
       <% }); %>
 </body>
