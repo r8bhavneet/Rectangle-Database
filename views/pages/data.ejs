@@ -42,9 +42,7 @@
         <input class="inputs" type="submit" class="update_button" name="submit_b" value="Update Info">
       </form>
 
-      <svg width= "<%=r.width %>" height="<%=r.height %>">
-        <rect width= "<%=r.width %>" height= "<%=r.height %>" color = "<%=r.color %>" />
-      </svg>
+      <div style="width:'<%=r.width %>'px;height:'<%=r.height %>'px;border:1px solid #000;">This is a rectangle!</div>
       
       <% }); %>
 </body>
