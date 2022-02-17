@@ -42,9 +42,6 @@ td,th {
     margin:8px;
     padding:8px;
   }
-  .rectangle {
-    align-items: center;
-    align-content: center;
-    font-size: large;
-    align-self: center;
-  }
+ .rectangle{
+   text-align: center;
+ }
