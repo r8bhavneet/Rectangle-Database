@@ -46,5 +46,6 @@ td,th {
     height: 50px;
     width: 100px;
     background-color: #555;
-    align-text: center;
+    align-items: center;
+    font-size: large;
   }
