@@ -10,8 +10,7 @@
 <body>
     <h1>Rectangle Data</h1>
     <% rows.forEach(function(r) { %>
-        <div class="rectangle" fill:"<%=r.color %>"><%=r.name %></div>
-        <br>
+        <div class="rectangle" fill="<%=r.color %>" ><%=r.name %></div>
     <table class="table2">
         
           <tr>
@@ -42,6 +41,7 @@
         <input class="inputs" type="number" name="Update_height" placeholder="Height">
         <input class="inputs" type="text" name="Update_color" placeholder="Color">
         <input class="inputs" type="submit" class="update_button" name="submit_b" value="Update Info">
+        <br>
       </form>      
       <% }); %>
 </body>
