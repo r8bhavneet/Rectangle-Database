@@ -43,7 +43,6 @@ td,th {
     padding:8px;
   }
   .rectangle {
-    display: flex;
     align-items: center;
     align-content: center;
     font-size: large;
