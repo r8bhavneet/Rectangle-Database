@@ -10,7 +10,11 @@
 <body>
     <h1>Rectangle Data</h1>
     <% rows.forEach(function(r) { %>
-        <div class="rectangle" background-color="<%=r.color %>" ><%=r.name %></div>
+        <div class="rectangle">
+        <svg width="400" height="110">
+            <rect width="300" height="100" fill="<%=r.color %>" />
+        </svg>
+        </div>
     <table class="table2">
         
           <tr>
