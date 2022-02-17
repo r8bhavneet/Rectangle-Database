@@ -42,8 +42,9 @@ td,th {
     margin:8px;
     padding:8px;
   }
-
-  .g{
-    color: blue;
-
+  .rectangle {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+    align-text: center;
   }
