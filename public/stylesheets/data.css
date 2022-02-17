@@ -43,6 +43,7 @@ td,th {
     padding:8px;
   }
 
-  rect{
-    align-items: center;
+  g{
+    color: blue;
+
   }
