@@ -35,7 +35,7 @@ td,th {
       text-align: center;
   }
   .update_button{
-    margin:8px;
+    margin:80px;
   }
   
   .inputs{
@@ -43,7 +43,4 @@ td,th {
     padding:8px;
   }
 
-  g{
-    color: blue;
-
-  }
+  
